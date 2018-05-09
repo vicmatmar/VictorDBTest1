@@ -11,7 +11,17 @@ namespace VictorDBTest1
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            using (App_Data.ManufacturingStore_Entities cx = new App_Data.ManufacturingStore_Entities())
+            {
+                var ps = cx.Products.ToArray();
+                string s = "";
+                foreach(var p in ps)
+                {
+                    s += p.Name;
+                }
+            }
+
+                routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
                 name: "Default",
