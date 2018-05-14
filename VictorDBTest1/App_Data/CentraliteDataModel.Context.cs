@@ -13,10 +13,10 @@ namespace VictorDBTest1.App_Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ManufacturingStore_Entities : DbContext
+    public partial class ManufacturingStore_v2Entities : DbContext
     {
-        public ManufacturingStore_Entities()
-            : base("name=ManufacturingStore_Entities")
+        public ManufacturingStore_v2Entities()
+            : base("name=ManufacturingStore_v2Entities")
         {
         }
     

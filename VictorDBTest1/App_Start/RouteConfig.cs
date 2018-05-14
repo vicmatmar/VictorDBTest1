@@ -11,7 +11,7 @@ namespace VictorDBTest1
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            using (App_Data.ManufacturingStore_Entities cx = new App_Data.ManufacturingStore_Entities())
+            using (App_Data.ManufacturingStore_v2Entities cx = new App_Data.ManufacturingStore_v2Entities())
             {
                 var ps = cx.Products.ToArray();
                 string s = "";
